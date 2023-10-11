@@ -2,21 +2,13 @@
 title: "emileygz_OriginalHomeworkCode_03"
 author: "Emiley Garcia-Zych"
 date: "`r Sys.Date()`"
-output: 
-  rmdformats:: html_document:
-    theme: "readthedown"
-    toc: yes
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
-install.packages('curl') ##install necessary packages
-install.packages('ggplot2')
-install.packages('manipulate')
-```
 
 # AN 588 Homework 3: Some of my best friends are Zombies...
 
@@ -148,9 +140,6 @@ zombies[new_sample,]
 new_sample_data <- zombies[new_sample,]
 ```
 
-```{r}
-install.packages('plotrix')
-```
 
 ```{r}
 is.atomic(new_sample_data)
@@ -186,7 +175,7 @@ sd(new_sample_data$years_of_education)
 std.error(new_sample_data$years_of_education)
 ```
 
-## Now draw 99 more random samples of 30 zombie apocalypse survivors, and calculate the mean for each variable for each of these samples. Together with the first sample you drew, you now have a set of 100 means for each variable (each based on 30 observations), which constitutes a sampling distribution for each variable. What are the means and standard deviations of this distribution of means for each variable? How do the standard deviations of means compare to the standard errors estimated in [5]? What do these sampling distributions look like (a graph might help here)? Are they normally distributed? What about for those variables that you concluded were not originally drawn from a normal distribution?
+## 6) Now draw 99 more random samples of 30 zombie apocalypse survivors, and calculate the mean for each variable for each of these samples. Together with the first sample you drew, you now have a set of 100 means for each variable (each based on 30 observations), which constitutes a sampling distribution for each variable. What are the means and standard deviations of this distribution of means for each variable? How do the standard deviations of means compare to the standard errors estimated in [5]? What do these sampling distributions look like (a graph might help here)? Are they normally distributed? What about for those variables that you concluded were not originally drawn from a normal distribution?
 
 ```{r}
 num_random_samples <- 99
