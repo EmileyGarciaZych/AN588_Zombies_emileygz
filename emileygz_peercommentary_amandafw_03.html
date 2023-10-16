@@ -2502,71 +2502,71 @@ CIs on slightly different code than for the normal…</h2>
 <pre><code>## [1] 1000</code></pre>
 <pre class="r"><code>new_sample &lt;- sample(zombies$id, 30, replace = FALSE, prob = NULL)
 new_sample</code></pre>
-<pre><code>##  [1] 969 261 252 388 314 774 762 281 177 327 285 276 927 787 152 908 114 821 976
-## [20] 433 703 585 598 539 255 506 224 132 310 769</code></pre>
+<pre><code>##  [1] 619 946 791 681 609 339 173 641 986 625 369 940 558 276 845 455 355 155 915
+## [20] 795  64 271 928 870 130 466 362 146 333 490</code></pre>
 <pre class="r"><code>zombies[new_sample,]</code></pre>
-<pre><code>##      id first_name last_name gender   height   weight zombies_killed
-## 969 969     Angela     White Female 64.40456 137.1078              3
-## 261 261      Tammy      Hart Female 57.63606 115.9745              4
-## 252 252      Janet Armstrong Female 66.44662 128.2348              7
-## 388 388    Carolyn   Hawkins Female 61.45906 128.2554              8
-## 314 314    Deborah  Mcdonald Female 68.98872 144.0345              2
-## 774 774    Stephen    Burton   Male 63.18440 135.8098              5
-## 762 762      Ralph     Moore   Male 64.36401 136.9864              2
-## 281 281     Philip Carpenter   Male 72.58839 147.1452              4
-## 177 177       Juan    Barnes   Male 62.33876 133.5535              3
-## 327 327     Jeremy    Fields   Male 71.99679 172.6311              3
-## 285 285     Amanda     Mills Female 58.88539 113.6764              1
-## 276 276      Linda      King Female 64.97681 122.3062              3
-## 927 927     Andrea     Berry Female 63.68960 132.8239              3
-## 787 787      Nancy    Flores Female 66.35376 131.4980              2
-## 152 152       Anne Hernandez Female 62.61210 122.9084              0
-## 908 908     Philip      Reed   Male 71.11957 149.6488              0
-## 114 114       Sean   Stanley   Male 72.66829 176.6687              2
-## 821 821    Marilyn  Anderson Female 62.61715 122.4186              3
-## 976 976   Clarence      Hunt   Male 66.02102 149.1646              1
-## 433 433      Ralph   Stanley   Male 72.33186 167.9066              3
-## 703 703     Daniel Rodriguez   Male 73.21899 170.9121              3
-## 585 585   Patricia     Smith Female 64.63448 124.3808              3
-## 598 598  Catherine     Kelly Female 65.89930 137.1548              2
-## 539 539    Timothy    Knight   Male 67.00396 161.9911              2
-## 255 255     Judith     Woods Female 64.87548 116.4600              2
-## 506 506   Margaret      Hart Female 68.01025 156.1151              1
-## 224 224      Tammy     Gomez Female 61.35044 120.3426              2
-## 132 132     Martin     Myers   Male 68.65588 146.4422              6
-## 310 310      Steve      Hill   Male 70.95550 155.3725              4
-## 769 769      James   Bradley   Male 64.61127 129.4849              3
+<pre><code>##      id first_name last_name    gender   height   weight zombies_killed
+## 619 619       Paul  Sullivan      Male 65.63107 140.2764              3
+## 946 946   Margaret     Garza    Female 62.79975 118.0084              2
+## 791 791     George  Martinez      Male 72.39275 147.0564              3
+## 681 681       Carl     Scott      Male 72.49018 154.3566              5
+## 609 609      Steve    Flores      Male 73.92739 154.1672              1
+## 339 339      Scott    Cooper      Male 71.01284 140.2185              4
+## 173 173  Christina  Robinson    Female 67.14351 125.2683              5
+## 641 641      Jerry   Jackson      Male 69.91751 166.3751              4
+## 986 986    Jessica    Turner    Female 72.14352 159.9359              2
+## 625 625      Roger     Scott      Male 64.62151 120.7034              9
+## 369 369    Timothy   Chapman      Male 73.57948 142.3964              4
+## 940 940    Charles Fernandez      Male 69.77392 174.3502              3
+## 558 558      James    Arnold      Male 66.81614 138.3308              3
+## 276 276      Linda      King    Female 64.97681 122.3062              3
+## 845 845       Sean Carpenter      Male 74.55413 154.5116              2
+## 455 455      Keith     Burns      Male 71.72562 157.6048              3
+## 355 355      Terry    Romero      Male 77.60621 182.0792              2
+## 155 155    Cynthia      Ford    Female 66.70297 137.6807              3
+## 915 915    Phyllis Alexander    Female 61.33734 110.1227              3
+## 795 795       Gary   Griffin      Male 70.09081 160.1624              5
+## 64   64     Harold    Morris      Male 67.43631 153.6334              1
+## 271 271     Jeremy     Meyer      Male 69.05869 143.3259              3
+## 928 928      Jerry     Ellis      Male 71.69323 155.4150              2
+## 870 870     Thomas       Fox      Male 78.58725 205.1857              6
+## 130 130       Sara    Flores    Female 71.30298 165.4885              3
+## 466 466      James  Matthews NonBinary 64.26664 140.3374              4
+## 362 362    Jessica  Mcdonald    Female 65.60196 126.5876              2
+## 146 146        Ann     Dixon    Female 66.76502 144.8788              1
+## 333 333        Roy      Cole      Male 67.47215 126.4773              6
+## 490 490       Judy  Peterson    Female 66.11227 128.5965              6
 ##     years_of_education                                 major      age
-## 969                  3                            philosophy 16.71759
-## 261                  1                             education 12.29306
-## 252                  4                               biology 22.09547
-## 388                  1                      animal husbandry 17.07809
-## 314                  1                                botany 19.82662
-## 774                  4       criminal justice administration 14.87000
-## 762                  4                 agricultural sciences 13.76439
-## 281                  3               business administration 22.37798
-## 177                  1                mechanical engineering 14.61176
-## 327                  3                            psychology 21.04131
-## 285                  5                      medicine/nursing 16.40110
+## 619                  1                      medicine/nursing 16.64580
+## 946                  2       criminal justice administration 18.87269
+## 791                  6                 environmental science 24.09405
+## 681                  4                     military strategy 22.14767
+## 609                  2 integrated water resources management 23.10560
+## 339                  7                      medicine/nursing 25.09822
+## 173                  3 integrated water resources management 19.43071
+## 641                  3                          architecture 23.17759
+## 986                  3                                botany 25.10403
+## 625                  2                mechanical engineering 17.31604
+## 369                  3                 environmental science 23.72008
+## 940                  5                      medicine/nursing 14.89299
+## 558                  0                          epidemiology 15.22140
 ## 276                  4                     military strategy 20.30056
-## 927                  0                         communication 17.06348
-## 787                  3                        human services 23.80758
-## 152                  2                             education 20.65740
-## 908                  6               business administration 20.58510
-## 114                  3                 agricultural sciences 19.19078
-## 821                  0                             economics 19.11045
-## 976                  2                 agricultural sciences 18.51631
-## 433                  2                          epidemiology 17.09044
-## 703                  1 integrated water resources management 21.74664
-## 585                  5                      animal husbandry 19.60460
-## 598                  3                         communication 19.75386
-## 539                  2                             education 15.82410
-## 255                  4       criminal justice administration 23.94809
-## 506                  4                             education 20.20789
-## 224                  3                 agricultural sciences 18.31888
-## 132                  6 integrated water resources management 21.65333
-## 310                  4       criminal justice administration 19.88286
-## 769                  4                 agricultural sciences 15.87418</code></pre>
+## 845                  2               business administration 23.19870
+## 455                  1                               biology 19.30345
+## 355                  2                          pharmacology 22.74342
+## 155                  2                         city planning 21.30124
+## 915                  3                            philosophy 18.02149
+## 795                  3                            psychology 16.55408
+## 64                   3                            psychology 20.94671
+## 271                  3               business administration 19.68915
+## 928                  5                          architecture 20.49921
+## 870                  3                         communication 24.32751
+## 130                  1                             logistics 20.64774
+## 466                  3 integrated water resources management 15.96942
+## 362                  1                         communication 21.64507
+## 146                  2                     culinart services 21.72252
+## 333                  2                          pharmacology 20.61760
+## 490                  1                      medicine/nursing 19.09397</code></pre>
 <pre class="r"><code>new_sample_data &lt;- zombies[new_sample,]</code></pre>
 <pre class="r"><code>is.atomic(new_sample_data)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
@@ -2574,44 +2574,44 @@ new_sample</code></pre>
 
 sample_height_mean &lt;- mean(new_sample_data$height)
 sample_height_mean</code></pre>
-<pre><code>## [1] 66.12995</code></pre>
+<pre><code>## [1] 69.25133</code></pre>
 <pre class="r"><code>## standard deviation
 sd(new_sample_data$height)</code></pre>
-<pre><code>## [1] 4.19935</code></pre>
+<pre><code>## [1] 4.192997</code></pre>
 <pre class="r"><code>std.error(new_sample_data$height)</code></pre>
-<pre><code>## [1] 0.7666929</code></pre>
+<pre><code>## [1] 0.7655329</code></pre>
 <pre class="r"><code>##calculating weight mean
 sample_weight_mean &lt;- mean(new_sample_data$weight)
 sample_weight_mean</code></pre>
-<pre><code>## [1] 139.5803</code></pre>
+<pre><code>## [1] 146.5279</code></pre>
 <pre class="r"><code>sd(new_sample_data$weight)</code></pre>
-<pre><code>## [1] 17.97344</code></pre>
+<pre><code>## [1] 20.58775</code></pre>
 <pre class="r"><code>std.error(new_sample_data$weight)</code></pre>
-<pre><code>## [1] 3.281487</code></pre>
+<pre><code>## [1] 3.758792</code></pre>
 <pre class="r"><code>## calculating age mean
 sample_age_mean &lt;- mean(new_sample_data$age)
 sample_age_mean</code></pre>
-<pre><code>## [1] 18.80713</code></pre>
+<pre><code>## [1] 20.51362</code></pre>
 <pre class="r"><code>sd(new_sample_data$age)</code></pre>
-<pre><code>## [1] 2.932555</code></pre>
+<pre><code>## [1] 2.920645</code></pre>
 <pre class="r"><code>std.error(new_sample_data$age)</code></pre>
-<pre><code>## [1] 0.5354089</code></pre>
+<pre><code>## [1] 0.5332344</code></pre>
 <pre class="r"><code>## calculating mean of number of zombies killed
 sample_numkilled_mean &lt;- mean(new_sample_data$zombies_killed)
 sample_numkilled_mean</code></pre>
-<pre><code>## [1] 2.9</code></pre>
+<pre><code>## [1] 3.433333</code></pre>
 <pre class="r"><code>sd(new_sample_data$zombies_killed)</code></pre>
-<pre><code>## [1] 1.807074</code></pre>
+<pre><code>## [1] 1.774986</code></pre>
 <pre class="r"><code>std.error(new_sample_data$zombies_killed)</code></pre>
-<pre><code>## [1] 0.3299251</code></pre>
+<pre><code>## [1] 0.3240666</code></pre>
 <pre class="r"><code>##calculating mean of years of education
 sample_yearsofedu_mean &lt;- mean(new_sample_data$years_of_education)
 sample_yearsofedu_mean</code></pre>
-<pre><code>## [1] 2.933333</code></pre>
+<pre><code>## [1] 2.733333</code></pre>
 <pre class="r"><code>sd(new_sample_data$years_of_education)</code></pre>
-<pre><code>## [1] 1.617434</code></pre>
+<pre><code>## [1] 1.552158</code></pre>
 <pre class="r"><code>std.error(new_sample_data$years_of_education)</code></pre>
-<pre><code>## [1] 0.2953017</code></pre>
+<pre><code>## [1] 0.283384</code></pre>
 <ul>
 <li>COMMENTS: I got similar results compared to you, but with longer
 code as I calculated the sd with the formula so I like your method alot
@@ -2653,7 +2653,8 @@ yet but everything looks good so far! I had calculated the random
 samples for each category first before adding the previous random sample
 and calculating the mean and sd but if you can figure out how to do this
 with all the categories at once, it would definitely be shorter and much
-easier to follow! Good job with this homework assignment! - AFW</li>
+easier to follow! Also, don’t forget to change the yammel with the
+{rmdformats} package. Good job with this homework assignment! - AFW</li>
 </ul>
 </div>
 </div>

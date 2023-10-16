@@ -206,4 +206,4 @@ random_samples
 ##}
 
 ```
-   + COMMENTS: I see that you might not have finished the last question yet but everything looks good so far! I had calculated the random samples for each category first before adding the previous random sample and calculating the mean and sd but if you can figure out how to do this with all the categories at once, it would definitely be shorter and much easier to follow! Good job with this homework assignment! - AFW  
+   + COMMENTS: I see that you might not have finished the last question yet but everything looks good so far! I had calculated the random samples for each category first before adding the previous random sample and calculating the mean and sd but if you can figure out how to do this with all the categories at once, it would definitely be shorter and much easier to follow! Also, don't forget to change the yammel with the {rmdformats} package. Good job with this homework assignment! - AFW  
