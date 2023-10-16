@@ -1,0 +1,209 @@
+---
+title: "emileygz_peercommentary_amandafw_03"
+author: "Amanda Wu"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# AN 588 Homework 3: Some of my best friends are Zombies...
+
+Emiley Garcia-Zych
+
+![](https://i.pinimg.com/originals/78/5d/ea/785dea225929ab34ca9f663af246d862.png)
+
+```{r}
+zombies = read.csv('https://raw.githubusercontent.com/fuzzyatelin/fuzzyatelin.github.io/master/AN588_Fall23/zombies.csv') ##load file into zombies data frame...
+zombies ## display
+```
+  + NOTE: just a super small note but it would be easier to knit and read the html if instead of printing the whole zombie dataset, you could do head(zombies) just so it won't print the long text each time you knit the code! - AFW
+  
+## 1) Calculate the population mean and standard deviation for each quantitative random variable (height, weight, age, number of zombies killed, and years of education). NOTE: You will not want to use the built in var() and sd() commands as these are for samples.
+
+```{r}
+
+##calculating height mean
+height_mean <- mean(zombies$height) ##use mean() to find the mean of all the heights in the zombie data frame
+height_mean ##display
+
+## standard deviation
+sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))} ##create a standard deviation of population function
+sd.p(zombies$height) ##use function to identify the standard deviation of population of all the heights...
+
+##calculating weight mean
+weight_mean <- mean(zombies$weight)  ##use mean() to find the mean of all the weights in the zombie data frame
+weight_mean ##display
+sd.p(zombies$weight) ##use function to identify the standard deviation of population of all the weights
+
+## calculating age mean
+age_mean <- mean(zombies$age) ##use mean() to find the mean of all the ages in the zombie data frame
+age_mean #display
+sd.p(zombies$age) ##use function to identify the standard deviation of population of all the ages
+
+## calculating mean of number of zombies killed
+numkilled_mean <- mean(zombies$zombies_killed) ##use mean() to find the mean of all the zombies killed in the zombie data frame
+numkilled_mean #display
+sd.p(zombies$zombies_killed) ##use function to identify the standard deviation of population of all the zombies killed
+
+##calculating mean of years of education
+yearsofedu_mean <- mean(zombies$years_of_education) ##use mean() to find the mean of all the years of education in the zombie data frame
+yearsofedu_mean #display
+sd.p(zombies$years_of_education) ##use function to identify the standard deviation of population of all the years of education
+```
+  + COMMENTS: Everything seems to run well! I pretty much did the exact same code but I also really like how detailed your comments are for each part, it makes the code really easy to follow! Also just a tip that might be helpful, naming the chunks (ex: ```{r Question 1}) could be helpful when running the code so it can be easier to read where errors appear - AFW
+
+## 2) Use {ggplot} to make boxplots of each of these variables by gender.
+
+Height & Gender Box Plot:
+
+```{r}
+library(ggplot2)
+class(zombies)
+ggplot(zombies, aes(x=gender, y = height, fill = gender)) + geom_boxplot() + stat_summary(fun = "mean", geom = "point", shape = 8, size = 2, color = "white") ##use ggplot box plot function. Change y to each variable as you go down. 
+```
+  + COMMENTS: I really like the colors! It looks very visually appealing - AFW
+
+```{r}
+ggplot(zombies, aes(x=gender, y = weight, fill = gender)) + geom_boxplot() + stat_summary(fun = "mean", geom = "point", shape = 8, size = 2, color = "white")
+```
+
+```{r}
+ggplot(zombies, aes(x=gender, y = age, fill = gender)) + geom_boxplot() + stat_summary(fun = "mean", geom = "point", shape = 8, size = 2, color = "white")
+```
+
+```{r}
+ggplot(zombies, aes(x=gender, y = zombies_killed, fill = gender)) + geom_boxplot() + stat_summary(fun = "mean", geom = "point", shape = 8, size = 2, color = "white")
+```
+
+```{r}
+ggplot(zombies, aes(x=gender, y = years_of_education, fill = gender)) + geom_boxplot() + stat_summary(fun = "mean", geom = "point", shape = 8, size = 2, color = "white")
+```
+  + COMMENTS: Everything looks good here! Nice job! - AFW
+  
+## 3) Use {ggplot} to make scatter plots of height and weight in relation to age. Do these variables seem to be related? In what way?
+
+```{r}
+ggplot(zombies, aes(x=age, y = height)) + geom_point(col = '#78c165')
+
+ggplot(zombies, aes(x=age, y = weight)) + geom_point(col = '#64484f')
+```
+
+These variables do seem to be related as they are both positively correlated with age. As age increases, so does height and weight.
+
+  + COMMENTS: I got to the same consensus as well, I like how you were more creative with the colors - AFW
+  
+## 4) Using histograms and Q-Q plots, check whether the quantitative variables seem to be drawn from a normal distribution. Which seem to be and which do not (hint: not all are drawn from the normal distribution)? For those that are not normal, can you determine from which common distribution they are drawn?
+
+```{r}
+qqnorm(zombies$height)
+hist(zombies$height, col = '#d3e397')
+```
+
+\*normal distribution
+
+```{r}
+qqnorm(zombies$weight)
+hist(zombies$weight,col = '#de6c6b')
+```
+
+\*normal distribution
+
+```{r}
+qqnorm(zombies$age)
+hist(zombies$age, col = '#64484f')
+
+```
+
+\*normal distribution
+
+```{r}
+qqnorm(zombies$zombies_killed)
+hist(zombies$zombies_killed, col = '#a41e1f')
+
+```
+
+\*Skewed to the left
+
+```{r}
+qqnorm(zombies$years_of_education)
+hist(zombies$years_of_education, col = '#78c165')
+
+```
+
+\*Skewed to the left
+
+  + COMMENTS: I got the same results as well, I think that they may have came from possison distribution due to how it's skewed to the left but not sure - AFW
+
+## 5) Now use the sample() function to sample ONE subset of 30 zombie survivors (without replacement) from this population and calculate the mean and sample standard deviation for each variable. Also estimate the standard error for each variable, and construct the 95% confidence interval for each mean. Note that for the variables that are not drawn from the normal distribution, you may need to base your estimate of the CIs on slightly different code than for the normal...
+
+```{r}
+length(zombies$id)
+new_sample <- sample(zombies$id, 30, replace = FALSE, prob = NULL)
+new_sample
+zombies[new_sample,]
+new_sample_data <- zombies[new_sample,]
+```
+
+
+```{r}
+is.atomic(new_sample_data)
+library ("plotrix")
+
+sample_height_mean <- mean(new_sample_data$height)
+sample_height_mean
+
+## standard deviation
+sd(new_sample_data$height)
+std.error(new_sample_data$height)
+
+##calculating weight mean
+sample_weight_mean <- mean(new_sample_data$weight)
+sample_weight_mean
+sd(new_sample_data$weight)
+std.error(new_sample_data$weight)
+## calculating age mean
+sample_age_mean <- mean(new_sample_data$age)
+sample_age_mean
+sd(new_sample_data$age)
+std.error(new_sample_data$age)
+## calculating mean of number of zombies killed
+sample_numkilled_mean <- mean(new_sample_data$zombies_killed)
+sample_numkilled_mean
+sd(new_sample_data$zombies_killed)
+std.error(new_sample_data$zombies_killed)
+
+##calculating mean of years of education
+sample_yearsofedu_mean <- mean(new_sample_data$years_of_education)
+sample_yearsofedu_mean
+sd(new_sample_data$years_of_education)
+std.error(new_sample_data$years_of_education)
+```
+
+  + COMMENTS: I got similar results compared to you, but with longer code as I calculated the sd with the formula so I like your method alot better! Curious about the package plotrix and how it was used during this question. - AFW
+  
+## 6) Now draw 99 more random samples of 30 zombie apocalypse survivors, and calculate the mean for each variable for each of these samples. Together with the first sample you drew, you now have a set of 100 means for each variable (each based on 30 observations), which constitutes a sampling distribution for each variable. What are the means and standard deviations of this distribution of means for each variable? How do the standard deviations of means compare to the standard errors estimated in [5]? What do these sampling distributions look like (a graph might help here)? Are they normally distributed? What about for those variables that you concluded were not originally drawn from a normal distribution?
+
+```{r}
+num_random_samples <- 99
+random_samples <- c("height", "weight", "age", "zombies killed", "years of education")
+random_samples
+
+
+##i = 1
+##while (i <99) {
+##  new_sample <- sample(zombies$id, 30, replace = FALSE, prob = NULL)
+ ## new_sample_data <- zombies[new_sample,]
+ ## sample_height_mean <- mean(new_sample_data$height)
+ ## sample_weight_mean <- mean(new_sample_data$weight)
+ ## sample_age_mean <- mean(new_sample_data$age)
+ ## sample_numkilled_mean <- mean(new_sample_data$zombies_killed)
+ ## sample_yearsofedu_mean <- mean(new_sample_data$years_of_education)
+ ## i++
+##}
+
+```
+   + COMMENTS: I see that you might not have finished the last question yet but everything looks good so far! I had calculated the random samples for each category first before adding the previous random sample and calculating the mean and sd but if you can figure out how to do this with all the categories at once, it would definitely be shorter and much easier to follow! Good job with this homework assignment! - AFW  
