@@ -2,7 +2,7 @@
 title: "emileygz_OriginalHomeworkCode_03"
 author: "Emiley Garcia-Zych"
 date: "`r Sys.Date()`"
-output: html_document
+output: rmdformats::readthedown
 ---
 
 ```{r setup, include=FALSE}
@@ -18,7 +18,7 @@ Emiley Garcia-Zych
 
 ```{r}
 zombies = read.csv('https://raw.githubusercontent.com/fuzzyatelin/fuzzyatelin.github.io/master/AN588_Fall23/zombies.csv') ##load file into zombies data frame...
-zombies ## display
+head (zombies) 
 ```
 
 ## 1) Calculate the population mean and standard deviation for each quantitative random variable (height, weight, age, number of zombies killed, and years of education). NOTE: You will not want to use the built in var() and sd() commands as these are for samples.
@@ -143,56 +143,96 @@ new_sample_data <- zombies[new_sample,]
 
 ```{r}
 is.atomic(new_sample_data)
-library ("plotrix")
 
 sample_height_mean <- mean(new_sample_data$height)
 sample_height_mean
-
 ## standard deviation
 sd(new_sample_data$height)
-std.error(new_sample_data$height)
+sample_standard_error_height <- std.error(new_sample_data$height)
+
+##ConfidenceInterval(95%)
+lower <- sample_height_mean - qnorm(1-0.05/2)*sample_standard_error_height
+upper <- sample_height_mean + qnorm(1-0.05/2)*sample_standard_error_height
+ci_height <- c(lower,upper)
+ci_height
 
 ##calculating weight mean
 sample_weight_mean <- mean(new_sample_data$weight)
 sample_weight_mean
 sd(new_sample_data$weight)
-std.error(new_sample_data$weight)
+sample_standard_error_weight <- std.error(new_sample_data$weight)
+
+##ConfidenceInterval(95%)
+lower <- sample_weight_mean - qnorm(1-0.05/2)*sample_standard_error_weight
+upper <- sample_weight_mean + qnorm(1-0.05/2)*sample_standard_error_weight
+ci_weight <- c(lower,upper)
+ci_weight
+
+
 ## calculating age mean
 sample_age_mean <- mean(new_sample_data$age)
 sample_age_mean
 sd(new_sample_data$age)
-std.error(new_sample_data$age)
+sample_standard_error_age <- std.error(new_sample_data$age)
+
+##ConfidenceInterval(95%)
+lower <- sample_age_mean - qnorm(1-0.05/2)*sample_standard_error_age
+upper <- sample_age_mean + qnorm(1-0.05/2)*sample_standard_error_age
+ci_age <- c(lower,upper)
+ci_age
+
 ## calculating mean of number of zombies killed
 sample_numkilled_mean <- mean(new_sample_data$zombies_killed)
 sample_numkilled_mean
 sd(new_sample_data$zombies_killed)
-std.error(new_sample_data$zombies_killed)
+sample_standard_error_killed <- std.error(new_sample_data$zombies_killed)
+
+##ConfidenceInterval(95%)
+lower <- sample_numkilled_mean - qnorm(1-0.05/2)*sample_standard_error_killed
+upper <- sample_numkilled_mean + qnorm(1-0.05/2)*sample_standard_error_killed
+ci_age <- c(lower,upper)
+ci_age
 
 ##calculating mean of years of education
 sample_yearsofedu_mean <- mean(new_sample_data$years_of_education)
 sample_yearsofedu_mean
 sd(new_sample_data$years_of_education)
-std.error(new_sample_data$years_of_education)
+sample_standard_error_years_of_edu <- std.error(new_sample_data$years_of_education)
+
+##ConfidenceInterval(95%)
+lower <- sample_yearsofedu_mean - qnorm(1-0.05/2)*sample_standard_error_years_of_edu
+upper <- sample_yearsofedu_mean + qnorm(1-0.05/2)*sample_standard_error_years_of_edu
+ci_yearsofedu <- c(lower,upper)
+ci_yearsofedu
 ```
 
 ## 6) Now draw 99 more random samples of 30 zombie apocalypse survivors, and calculate the mean for each variable for each of these samples. Together with the first sample you drew, you now have a set of 100 means for each variable (each based on 30 observations), which constitutes a sampling distribution for each variable. What are the means and standard deviations of this distribution of means for each variable? How do the standard deviations of means compare to the standard errors estimated in [5]? What do these sampling distributions look like (a graph might help here)? Are they normally distributed? What about for those variables that you concluded were not originally drawn from a normal distribution?
 
 ```{r}
-num_random_samples <- 99
-random_samples <- c("height", "weight", "age", "zombies killed", "years of education")
-random_samples
+sample_size <- 30 #number of observations in each sample
+num_samples <- 99 #total number of samples to draw
+sample_ids <- numeric(num_samples)
 
+sample_means_height <- numeric(num_samples) #create a vector to store all the means
+sample_means_height[1] <- sample_height_mean #store the mean from problem 5 in the vector
 
-##i = 1
-##while (i <99) {
-##  new_sample <- sample(zombies$id, 30, replace = FALSE, prob = NULL)
- ## new_sample_data <- zombies[new_sample,]
- ## sample_height_mean <- mean(new_sample_data$height)
- ## sample_weight_mean <- mean(new_sample_data$weight)
- ## sample_age_mean <- mean(new_sample_data$age)
- ## sample_numkilled_mean <- mean(new_sample_data$zombies_killed)
- ## sample_yearsofedu_mean <- mean(new_sample_data$years_of_education)
- ## i++
+#draw 99 more samples and store that data in the vector
+for(i in 2:num_samples) {
+  sample_ids[i]<- sample(zombies$id, sample_size, replace = FALSE, prob = NULL)
+}
+
+##
+##if (i in 2:num_samples){
+##  sample_means_height <- mean(zombies[sample_ids].height)
+ ## sample_means_weight <- mean(zombies[sample_ids].weight)
+ ## sample_means_age <- mean(zombies[sample_ids].weight)
+##  sample_means_zombies_killed <- mean(zombies[sample_ids].weight)
 ##}
 
 ```
+
+Reflection: 
+1) I learned how to reduce clutter by not printing so much data. Instead I only pulled what I needed. 
+2) I would have liked to see more visually aesthetic graphs and colors. It's an easy thing that can make the code seem more developed. 
+3) I misunderstood problem #6 and was unable to attend office hours in time to figure out the solution. I saw other people use different samples to calculate the mean of each variable but I was under the impression it was supposed to be the same sample. I came up with a set of instructions to achieve this but was unable to achieve it in actual code. I plan on continuing to work on it and bring it to office hours for further discussion. 
+4) The annotation of my peer was really well done and easy to interpret. It was essentially on every line which made it easy to follow. 
