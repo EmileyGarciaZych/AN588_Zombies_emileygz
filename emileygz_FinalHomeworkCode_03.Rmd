@@ -212,15 +212,15 @@ ci_yearsofedu
 ```{r}
 sample_size <- 30 #number of observations in each sample
 num_samples <- 99 #total number of samples to draw
-sample_ids <- numeric(num_samples)
+##sample_ids <- numeric(num_samples)
 
-sample_means_height <- numeric(num_samples) #create a vector to store all the means
-sample_means_height[1] <- sample_height_mean #store the mean from problem 5 in the vector
+##sample_means_height <- numeric(num_samples) #create a vector to store all the means
+##sample_means_height[1] <- sample_height_mean #store the mean from problem 5 in the vector
 
 #draw 99 more samples and store that data in the vector
-for(i in 2:num_samples) {
-  sample_ids[i]<- sample(zombies$id, sample_size, replace = FALSE, prob = NULL)
-}
+##for(i in 2:num_samples) {
+ ## sample_ids[i]<- sample(zombies$id, sample_size, replace = FALSE, prob = NULL)
+##}
 
 ##
 ##if (i in 2:num_samples){

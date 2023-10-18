@@ -1463,71 +1463,71 @@ CIs on slightly different code than for the normal…</h2>
 <pre><code>## [1] 1000</code></pre>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a>new_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(zombies<span class="sc">$</span>id, <span class="dv">30</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>, <span class="at">prob =</span> <span class="cn">NULL</span>)</span>
 <span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a>new_sample</span></code></pre></div>
-<pre><code>##  [1] 726 320 968 412 342 319 786 948 848 692 132 347 839 605 981 126 517 207 814
-## [20] 529 349 163  44 481 510 420 269 574 331 247</code></pre>
+<pre><code>##  [1] 865 487 592 469 270 942 136 279 130 780 758 401 551 916 555 215 531 450 670
+## [20] 201 698 283 618 750 137 998 719 164 762 982</code></pre>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a>zombies[new_sample,]</span></code></pre></div>
-<pre><code>##      id  first_name last_name gender   height   weight zombies_killed
-## 726 726       Robin  Gonzales Female 66.55435 129.9026              4
-## 320 320       Maria    Warren Female 69.47477 156.7184              2
-## 968 968      Ernest    Hansen   Male 67.89409 159.2552              4
-## 412 412 Christopher   Edwards   Male 71.23779 164.3853              1
-## 342 342        Alan     Mason   Male 71.81617 161.1223              2
-## 319 319         Amy  Matthews Female 64.46121 129.8580              0
-## 786 786        Paul   Nichols   Male 71.65349 166.4322              2
-## 948 948       Donna   Gardner Female 70.19100 160.5423              2
-## 848 848       Frank   Gilbert   Male 73.21440 164.9757              2
-## 692 692       Aaron   Freeman   Male 69.78012 142.1297              1
-## 132 132      Martin     Myers   Male 68.65588 146.4422              6
-## 347 347      Walter    Chavez   Male 72.39991 181.8052              2
-## 839 839        Ryan    Barnes   Male 68.23992 128.3578              2
-## 605 605    Patricia   Chapman Female 69.53375 155.2748              2
-## 981 981       Julie  Anderson Female 66.64354 139.0364              5
-## 126 126        Eric     Young   Male 70.44371 171.2002              4
-## 517 517       Kathy    Fuller Female 63.64877 133.9467              2
-## 207 207     Phyllis      King Female 64.65742 129.5756              6
-## 814 814       Chris     Burns   Male 68.78755 173.4652              1
-## 529 529     Matthew    Oliver   Male 65.00650 138.9624              7
-## 349 349       Tammy    Butler Female 65.94866 145.4963              3
-## 163 163      Edward    Martin   Male 68.08834 141.3926              2
-## 44   44       Shawn    Harris   Male 66.90534 132.5518              1
-## 481 481    Kimberly    Foster Female 67.85106 133.7700              2
-## 510 510        Tina    Taylor Female 64.25954 124.1066              1
-## 420 420       Betty   Mendoza Female 60.21609 116.9201              5
-## 269 269      Donald     Smith   Male 61.77285 133.8740              8
-## 574 574  Jacqueline      Cook Female 62.93356 125.8427              2
-## 331 331      Gerald     Myers   Male 72.06090 153.2824              4
-## 247 247        Fred    Knight   Male 62.07196 137.0140              3
+<pre><code>##      id  first_name last_name    gender   height   weight zombies_killed
+## 865 865  Jacqueline Carpenter    Female 67.15770 138.8568              5
+## 487 487     Marilyn    Weaver    Female 67.69933 114.8268              4
+## 592 592    Virginia    Harper    Female 56.05432 104.0400              6
+## 469 469      Daniel   Nichols      Male 69.85324 150.4624              3
+## 270 270 Christopher       Lee      Male 67.64806 130.5163              2
+## 942 942       Susan Patterson    Female 64.67957 134.2557              3
+## 136 136      Steven  Robinson      Male 67.62471 146.4160              1
+## 279 279       Tammy  Gonzales    Female 62.34640 117.5786              6
+## 130 130        Sara    Flores    Female 71.30298 165.4885              3
+## 780 780       Kevin   Andrews      Male 66.62536 135.3072              5
+## 758 758        Lisa  Campbell    Female 67.45969 146.1202              6
+## 401 401      Ernest    Porter      Male 77.89866 189.5286              1
+## 551 551       Nancy   Wallace    Female 66.49196 132.5377              0
+## 916 916      Arthur     Grant      Male 67.77419 137.1519              4
+## 555 555        Tina    Chavez    Female 67.45583 141.6098              3
+## 215 215       Diana     Ortiz    Female 66.95127 151.7607              5
+## 531 531      Andrea      Ruiz    Female 69.32048 140.0381              2
+## 450 450      Brenda    Greene    Female 63.32991 134.3688              2
+## 670 670     Gregory    Walker      Male 69.40674 138.8645              3
+## 201 201     Heather     Stone    Female 63.54681 113.2698              6
+## 698 698      Angela     Brown    Female 63.25111 136.3047              4
+## 283 283      Gerald    Kelley      Male 73.60768 171.5406              1
+## 618 618       Janet   Johnson    Female 62.32428 125.1633              2
+## 750 750     Phyllis Gutierrez    Female 65.91209 148.3583              4
+## 137 137       Jimmy     Scott NonBinary 67.35961 138.6681              1
+## 998 998       Randy     Lewis      Male 69.85086 166.9600              5
+## 719 719       Debra   Jackson    Female 73.81399 159.5498              4
+## 164 164       Janet      Cook    Female 67.33379 139.5274              5
+## 762 762       Ralph     Moore      Male 64.36401 136.9864              2
+## 982 982      Joseph   Simmons      Male 69.80803 143.7895              5
 ##     years_of_education                                 major      age
-## 726                  2                         city planning 20.11425
-## 320                  5                     culinart services 22.57393
-## 968                  2       criminal justice administration 18.51140
-## 412                  2                          epidemiology 21.42676
-## 342                  8                      animal husbandry 20.35923
-## 319                  2                            philosophy 17.50802
-## 786                  2                             economics 18.54976
-## 948                  1               business administration 23.41001
-## 848                  6                    physical education 17.44240
-## 692                  3                     culinart services 18.35593
-## 132                  6 integrated water resources management 21.65333
-## 347                  6                               biology 19.13033
-## 839                  1                    physical education 19.92937
-## 605                  0                      animal husbandry 21.97010
-## 981                  3               business administration 20.95489
-## 126                  5                mechanical engineering 20.42065
-## 517                  0                     military strategy 17.13706
-## 207                  3                 agricultural sciences 19.03575
-## 814                  3                    physical education 17.86783
-## 529                  4                             logistics 17.95097
-## 349                  0                 agricultural sciences 20.08662
-## 163                  2                         communication 19.57079
-## 44                   3                          pharmacology 19.62351
-## 481                  3                     military strategy 19.73364
-## 510                  2                      applied sciences 22.34368
-## 420                  5                            psychology 13.45451
-## 269                  2                             logistics 17.90380
-## 574                  2                         city planning 18.56088
-## 331                  1                          architecture 23.51740
-## 247                  3                      applied sciences 14.97051</code></pre>
+## 865                  1 integrated water resources management 20.33517
+## 487                  3                          architecture 24.70782
+## 592                  1                        human services 14.15051
+## 469                  3                             logistics 20.02986
+## 270                  2                                botany 25.58631
+## 942                  3                         city planning 18.93974
+## 136                  6                 environmental science 21.64968
+## 279                  1                            psychology 17.71510
+## 130                  1                             logistics 20.64774
+## 780                  1                         city planning 15.75510
+## 758                  5                     military strategy 22.55533
+## 401                  3                      medicine/nursing 25.82848
+## 551                  5                mechanical engineering 22.04910
+## 916                  4                          pharmacology 17.53711
+## 555                  5                 environmental science 19.67025
+## 215                  4                          pharmacology 17.17253
+## 531                  2                            psychology 24.53695
+## 450                  3                            philosophy 17.49842
+## 670                  4       criminal justice administration 28.38916
+## 201                  0                mechanical engineering 19.01969
+## 698                  2                               biology 16.32636
+## 283                  0                          epidemiology 23.19955
+## 618                  7                      animal husbandry 17.56003
+## 750                  4                      animal husbandry 21.57588
+## 137                  4                                botany 21.92487
+## 998                  3                          architecture 19.42444
+## 719                  3                        energy studies 27.37130
+## 164                  2                          epidemiology 20.65624
+## 762                  4                 agricultural sciences 13.76439
+## 982                  1                        energy studies 22.20665</code></pre>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a>new_sample_data <span class="ot">&lt;-</span> zombies[new_sample,]</span></code></pre></div>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="fu">is.atomic</span>(new_sample_data)</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
@@ -1535,10 +1535,10 @@ CIs on slightly different code than for the normal…</h2>
 <span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a></span>
 <span id="cb51-3"><a href="#cb51-3" tabindex="-1"></a>sample_height_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(new_sample_data<span class="sc">$</span>height)</span>
 <span id="cb51-4"><a href="#cb51-4" tabindex="-1"></a>sample_height_mean</span></code></pre></div>
-<pre><code>## [1] 67.54675</code></pre>
+<pre><code>## [1] 67.27509</code></pre>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a><span class="do">## standard deviation</span></span>
 <span id="cb53-2"><a href="#cb53-2" tabindex="-1"></a><span class="fu">sd</span>(new_sample_data<span class="sc">$</span>height)</span></code></pre></div>
-<pre><code>## [1] 3.473961</code></pre>
+<pre><code>## [1] 4.067209</code></pre>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a>sample_standard_error_height <span class="ot">&lt;-</span> <span class="fu">std.error</span>(new_sample_data<span class="sc">$</span>height)</span>
 <span id="cb55-2"><a href="#cb55-2" tabindex="-1"></a></span>
 <span id="cb55-3"><a href="#cb55-3" tabindex="-1"></a><span class="do">##ConfidenceInterval(95%)</span></span>
@@ -1546,13 +1546,13 @@ CIs on slightly different code than for the normal…</h2>
 <span id="cb55-5"><a href="#cb55-5" tabindex="-1"></a>upper <span class="ot">&lt;-</span> sample_height_mean <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">*</span>sample_standard_error_height</span>
 <span id="cb55-6"><a href="#cb55-6" tabindex="-1"></a>ci_height <span class="ot">&lt;-</span> <span class="fu">c</span>(lower,upper)</span>
 <span id="cb55-7"><a href="#cb55-7" tabindex="-1"></a>ci_height</span></code></pre></div>
-<pre><code>## [1] 66.30364 68.78987</code></pre>
+<pre><code>## [1] 65.81968 68.73049</code></pre>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a><span class="do">##calculating weight mean</span></span>
 <span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a>sample_weight_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(new_sample_data<span class="sc">$</span>weight)</span>
 <span id="cb57-3"><a href="#cb57-3" tabindex="-1"></a>sample_weight_mean</span></code></pre></div>
-<pre><code>## [1] 145.9213</code></pre>
+<pre><code>## [1] 140.9949</code></pre>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" tabindex="-1"></a><span class="fu">sd</span>(new_sample_data<span class="sc">$</span>weight)</span></code></pre></div>
-<pre><code>## [1] 16.94487</code></pre>
+<pre><code>## [1] 17.83262</code></pre>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" tabindex="-1"></a>sample_standard_error_weight <span class="ot">&lt;-</span> <span class="fu">std.error</span>(new_sample_data<span class="sc">$</span>weight)</span>
 <span id="cb61-2"><a href="#cb61-2" tabindex="-1"></a></span>
 <span id="cb61-3"><a href="#cb61-3" tabindex="-1"></a><span class="do">##ConfidenceInterval(95%)</span></span>
@@ -1560,13 +1560,13 @@ CIs on slightly different code than for the normal…</h2>
 <span id="cb61-5"><a href="#cb61-5" tabindex="-1"></a>upper <span class="ot">&lt;-</span> sample_weight_mean <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">*</span>sample_standard_error_weight</span>
 <span id="cb61-6"><a href="#cb61-6" tabindex="-1"></a>ci_weight <span class="ot">&lt;-</span> <span class="fu">c</span>(lower,upper)</span>
 <span id="cb61-7"><a href="#cb61-7" tabindex="-1"></a>ci_weight</span></code></pre></div>
-<pre><code>## [1] 139.8577 151.9848</code></pre>
+<pre><code>## [1] 134.6137 147.3761</code></pre>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a><span class="do">## calculating age mean</span></span>
 <span id="cb63-2"><a href="#cb63-2" tabindex="-1"></a>sample_age_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(new_sample_data<span class="sc">$</span>age)</span>
 <span id="cb63-3"><a href="#cb63-3" tabindex="-1"></a>sample_age_mean</span></code></pre></div>
-<pre><code>## [1] 19.46891</code></pre>
+<pre><code>## [1] 20.59279</code></pre>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a><span class="fu">sd</span>(new_sample_data<span class="sc">$</span>age)</span></code></pre></div>
-<pre><code>## [1] 2.281501</code></pre>
+<pre><code>## [1] 3.697333</code></pre>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a>sample_standard_error_age <span class="ot">&lt;-</span> <span class="fu">std.error</span>(new_sample_data<span class="sc">$</span>age)</span>
 <span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a></span>
 <span id="cb67-3"><a href="#cb67-3" tabindex="-1"></a><span class="do">##ConfidenceInterval(95%)</span></span>
@@ -1574,13 +1574,13 @@ CIs on slightly different code than for the normal…</h2>
 <span id="cb67-5"><a href="#cb67-5" tabindex="-1"></a>upper <span class="ot">&lt;-</span> sample_age_mean <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">*</span>sample_standard_error_age</span>
 <span id="cb67-6"><a href="#cb67-6" tabindex="-1"></a>ci_age <span class="ot">&lt;-</span> <span class="fu">c</span>(lower,upper)</span>
 <span id="cb67-7"><a href="#cb67-7" tabindex="-1"></a>ci_age</span></code></pre></div>
-<pre><code>## [1] 18.65250 20.28532</code></pre>
+<pre><code>## [1] 19.26974 21.91584</code></pre>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" tabindex="-1"></a><span class="do">## calculating mean of number of zombies killed</span></span>
 <span id="cb69-2"><a href="#cb69-2" tabindex="-1"></a>sample_numkilled_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(new_sample_data<span class="sc">$</span>zombies_killed)</span>
 <span id="cb69-3"><a href="#cb69-3" tabindex="-1"></a>sample_numkilled_mean</span></code></pre></div>
-<pre><code>## [1] 2.933333</code></pre>
+<pre><code>## [1] 3.433333</code></pre>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" tabindex="-1"></a><span class="fu">sd</span>(new_sample_data<span class="sc">$</span>zombies_killed)</span></code></pre></div>
-<pre><code>## [1] 1.964045</code></pre>
+<pre><code>## [1] 1.755451</code></pre>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a>sample_standard_error_killed <span class="ot">&lt;-</span> <span class="fu">std.error</span>(new_sample_data<span class="sc">$</span>zombies_killed)</span>
 <span id="cb73-2"><a href="#cb73-2" tabindex="-1"></a></span>
 <span id="cb73-3"><a href="#cb73-3" tabindex="-1"></a><span class="do">##ConfidenceInterval(95%)</span></span>
@@ -1588,13 +1588,13 @@ CIs on slightly different code than for the normal…</h2>
 <span id="cb73-5"><a href="#cb73-5" tabindex="-1"></a>upper <span class="ot">&lt;-</span> sample_numkilled_mean <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">*</span>sample_standard_error_killed</span>
 <span id="cb73-6"><a href="#cb73-6" tabindex="-1"></a>ci_age <span class="ot">&lt;-</span> <span class="fu">c</span>(lower,upper)</span>
 <span id="cb73-7"><a href="#cb73-7" tabindex="-1"></a>ci_age</span></code></pre></div>
-<pre><code>## [1] 2.230522 3.636145</code></pre>
+<pre><code>## [1] 2.805165 4.061502</code></pre>
 <div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" tabindex="-1"></a><span class="do">##calculating mean of years of education</span></span>
 <span id="cb75-2"><a href="#cb75-2" tabindex="-1"></a>sample_yearsofedu_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(new_sample_data<span class="sc">$</span>years_of_education)</span>
 <span id="cb75-3"><a href="#cb75-3" tabindex="-1"></a>sample_yearsofedu_mean</span></code></pre></div>
 <pre><code>## [1] 2.9</code></pre>
 <div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" tabindex="-1"></a><span class="fu">sd</span>(new_sample_data<span class="sc">$</span>years_of_education)</span></code></pre></div>
-<pre><code>## [1] 1.971346</code></pre>
+<pre><code>## [1] 1.748891</code></pre>
 <div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" tabindex="-1"></a>sample_standard_error_years_of_edu <span class="ot">&lt;-</span> <span class="fu">std.error</span>(new_sample_data<span class="sc">$</span>years_of_education)</span>
 <span id="cb79-2"><a href="#cb79-2" tabindex="-1"></a></span>
 <span id="cb79-3"><a href="#cb79-3" tabindex="-1"></a><span class="do">##ConfidenceInterval(95%)</span></span>
@@ -1602,7 +1602,7 @@ CIs on slightly different code than for the normal…</h2>
 <span id="cb79-5"><a href="#cb79-5" tabindex="-1"></a>upper <span class="ot">&lt;-</span> sample_yearsofedu_mean <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">*</span>sample_standard_error_years_of_edu</span>
 <span id="cb79-6"><a href="#cb79-6" tabindex="-1"></a>ci_yearsofedu <span class="ot">&lt;-</span> <span class="fu">c</span>(lower,upper)</span>
 <span id="cb79-7"><a href="#cb79-7" tabindex="-1"></a>ci_yearsofedu</span></code></pre></div>
-<pre><code>## [1] 2.194576 3.605424</code></pre>
+<pre><code>## [1] 2.274179 3.525821</code></pre>
 </div>
 <div id="now-draw-99-more-random-samples-of-30-zombie-apocalypse-survivors-and-calculate-the-mean-for-each-variable-for-each-of-these-samples.-together-with-the-first-sample-you-drew-you-now-have-a-set-of-100-means-for-each-variable-each-based-on-30-observations-which-constitutes-a-sampling-distribution-for-each-variable.-what-are-the-means-and-standard-deviations-of-this-distribution-of-means-for-each-variable-how-do-the-standard-deviations-of-means-compare-to-the-standard-errors-estimated-in-5-what-do-these-sampling-distributions-look-like-a-graph-might-help-here-are-they-normally-distributed-what-about-for-those-variables-that-you-concluded-were-not-originally-drawn-from-a-normal-distribution" class="section level2">
 <h2>6) Now draw 99 more random samples of 30 zombie apocalypse
@@ -1618,315 +1618,23 @@ about for those variables that you concluded were not originally drawn
 from a normal distribution?</h2>
 <div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="dv">30</span> <span class="co">#number of observations in each sample</span></span>
 <span id="cb81-2"><a href="#cb81-2" tabindex="-1"></a>num_samples <span class="ot">&lt;-</span> <span class="dv">99</span> <span class="co">#total number of samples to draw</span></span>
-<span id="cb81-3"><a href="#cb81-3" tabindex="-1"></a>sample_ids <span class="ot">&lt;-</span> <span class="fu">numeric</span>(num_samples)</span>
+<span id="cb81-3"><a href="#cb81-3" tabindex="-1"></a><span class="do">##sample_ids &lt;- numeric(num_samples)</span></span>
 <span id="cb81-4"><a href="#cb81-4" tabindex="-1"></a></span>
-<span id="cb81-5"><a href="#cb81-5" tabindex="-1"></a>sample_means_height <span class="ot">&lt;-</span> <span class="fu">numeric</span>(num_samples) <span class="co">#create a vector to store all the means</span></span>
-<span id="cb81-6"><a href="#cb81-6" tabindex="-1"></a>sample_means_height[<span class="dv">1</span>] <span class="ot">&lt;-</span> sample_height_mean <span class="co">#store the mean from problem 5 in the vector</span></span>
+<span id="cb81-5"><a href="#cb81-5" tabindex="-1"></a><span class="do">##sample_means_height &lt;- numeric(num_samples) #create a vector to store all the means</span></span>
+<span id="cb81-6"><a href="#cb81-6" tabindex="-1"></a><span class="do">##sample_means_height[1] &lt;- sample_height_mean #store the mean from problem 5 in the vector</span></span>
 <span id="cb81-7"><a href="#cb81-7" tabindex="-1"></a></span>
 <span id="cb81-8"><a href="#cb81-8" tabindex="-1"></a><span class="co">#draw 99 more samples and store that data in the vector</span></span>
-<span id="cb81-9"><a href="#cb81-9" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>num_samples) {</span>
-<span id="cb81-10"><a href="#cb81-10" tabindex="-1"></a>  sample_ids[i]<span class="ot">&lt;-</span> <span class="fu">sample</span>(zombies<span class="sc">$</span>id, sample_size, <span class="at">replace =</span> <span class="cn">FALSE</span>, <span class="at">prob =</span> <span class="cn">NULL</span>)</span>
-<span id="cb81-11"><a href="#cb81-11" tabindex="-1"></a>}</span></code></pre></div>
-<pre><code>## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length
-
-## Warning in sample_ids[i] &lt;- sample(zombies$id, sample_size, replace = FALSE, :
-## number of items to replace is not a multiple of replacement length</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" tabindex="-1"></a><span class="do">##</span></span>
-<span id="cb83-2"><a href="#cb83-2" tabindex="-1"></a><span class="do">##if (i in 2:num_samples){</span></span>
-<span id="cb83-3"><a href="#cb83-3" tabindex="-1"></a><span class="do">##  sample_means_height &lt;- mean(zombies[sample_ids].height)</span></span>
-<span id="cb83-4"><a href="#cb83-4" tabindex="-1"></a> <span class="do">## sample_means_weight &lt;- mean(zombies[sample_ids].weight)</span></span>
-<span id="cb83-5"><a href="#cb83-5" tabindex="-1"></a> <span class="do">## sample_means_age &lt;- mean(zombies[sample_ids].weight)</span></span>
-<span id="cb83-6"><a href="#cb83-6" tabindex="-1"></a><span class="do">##  sample_means_zombies_killed &lt;- mean(zombies[sample_ids].weight)</span></span>
-<span id="cb83-7"><a href="#cb83-7" tabindex="-1"></a><span class="do">##}</span></span></code></pre></div>
+<span id="cb81-9"><a href="#cb81-9" tabindex="-1"></a><span class="do">##for(i in 2:num_samples) {</span></span>
+<span id="cb81-10"><a href="#cb81-10" tabindex="-1"></a> <span class="do">## sample_ids[i]&lt;- sample(zombies$id, sample_size, replace = FALSE, prob = NULL)</span></span>
+<span id="cb81-11"><a href="#cb81-11" tabindex="-1"></a><span class="do">##}</span></span>
+<span id="cb81-12"><a href="#cb81-12" tabindex="-1"></a></span>
+<span id="cb81-13"><a href="#cb81-13" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb81-14"><a href="#cb81-14" tabindex="-1"></a><span class="do">##if (i in 2:num_samples){</span></span>
+<span id="cb81-15"><a href="#cb81-15" tabindex="-1"></a><span class="do">##  sample_means_height &lt;- mean(zombies[sample_ids].height)</span></span>
+<span id="cb81-16"><a href="#cb81-16" tabindex="-1"></a> <span class="do">## sample_means_weight &lt;- mean(zombies[sample_ids].weight)</span></span>
+<span id="cb81-17"><a href="#cb81-17" tabindex="-1"></a> <span class="do">## sample_means_age &lt;- mean(zombies[sample_ids].weight)</span></span>
+<span id="cb81-18"><a href="#cb81-18" tabindex="-1"></a><span class="do">##  sample_means_zombies_killed &lt;- mean(zombies[sample_ids].weight)</span></span>
+<span id="cb81-19"><a href="#cb81-19" tabindex="-1"></a><span class="do">##}</span></span></code></pre></div>
 <p>Reflection: 1) I learned how to reduce clutter by not printing so
 much data. Instead I only pulled what I needed. 2) I would have liked to
 see more visually aesthetic graphs and colors. It’s an easy thing that
